@@ -8,7 +8,20 @@
 </div>
 
   <div class="container">
-<form class="form-horizontal" action='' method="POST">
+
+    <%= form_for(@password) do |f| %>
+      <% if @password.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@password.errors.count, "error") %> prohibited this password from being saved:</h2>
+
+          <ul>
+          <% @password.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
   <fieldset>
     <div id="legend">
       <legend class="">Cadastre uma nova senha</legend>
@@ -18,26 +31,24 @@
       <!-- Description -->
       <label class="control-label"  for="description">Descrição da senha</label>
       <div class="controls">
-        <input type="text" id="description" name="description" required="required" placeholder="" class="input-xlarge">
+        <%= f.text_field :description, required:"required", placeholder:"", class:"input-xlarge" %>
         <p class="help-block">Digite a descrição da senha <small> * Obrigatório </small> </p>
       </div>
     </div>
 
     <div class="control-group">
-      <!-- Username -->
       <label class="control-label"  for="url">URL da senha</label>
       <div class="controls">
-        <input type="text" id="url" name="url" placeholder="" class="input-xlarge">
+        <%= f.text_field :url, placeholder:"", class:"input-xlarge" %>
         <p class="help-block">Digite a URL do site ou deixe em branco</p>
       </div>
     </div>
 
     <div class="control-group">
-      <!-- E-mail -->
       <label class="control-label" for="user">Usuário</label>
       <div class="controls">
-        <input type="text" id="user" name="user" required="required" placeholder="" class="input-xlarge">
-        <p class="help-block">Digite o usuário  <small> * Obrigatório </small> </p>
+        <%= f.text_field :user, placeholder:"", class:"input-xlarge" %>
+        <p class="help-block">Digite o usuário </p>
       </div>
     </div>
 
@@ -45,7 +56,7 @@
       <!-- Password-->
       <label class="control-label" for="password">Senha</label>
       <div class="controls">
-        <input type="password" id="password" name="password" required="required" placeholder="" class="input-xlarge">
+        <%= f.text_field :password, type:"password", required:"required", placeholder:"", class:"input-xlarge" %>
         <p class="help-block">Digite a senha <small> * Obrigatório </small></p>
       </div>
     </div>
@@ -59,12 +70,16 @@
       </div>
     </div>
 
+
+  </fieldset>
+  <div class="actions">
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success">Registrar senha</button>
+        <%= f.submit "Registrar senha", class:"btn btn-success" %>
       </div>
     </div>
-  </fieldset>
-</form>
+  </div>
+  <% end %>
+
   </div>
