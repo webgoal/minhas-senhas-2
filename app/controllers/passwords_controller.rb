@@ -19,7 +19,7 @@ class PasswordsController < ApplicationController
   end
 
 	def index
-	  @password = Password.new 
+		@passwords = Password.all
   end
 
 	def password_params
