@@ -8,5 +8,6 @@ class PasswordsController < ApplicationController
 	end
 
 	def index
+	  @password = Password.new 
   end
 end
