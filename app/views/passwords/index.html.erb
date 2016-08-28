@@ -83,3 +83,30 @@
   <% end %>
 
   </div>
+
+  <div class="container">
+  </br>
+  <h4>Listando usuários</h4>
+
+<table class=" table table-striped" data-sort-name="name" data-sort-order="desc">
+  <thead>
+    <tr>
+      <th data-field="name" data-sortable="true">Descrição</th>
+      <th data-field="age" data-sortable="true">User</th>
+      <th data-field="age" data-sortable="true">Senha</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @passwords.each do |p| %>
+        <tr>
+          <td><%= p.description %></td>
+          <td><%= p.user %></td>
+          <td> *** </td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

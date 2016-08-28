@@ -11,6 +11,8 @@ RSpec.describe Password, type: :model do
       new_password = Password.new({user: "usuario", url: "url teste", description: "description"})
       expect(new_password.valid?).to be false
     end
+
+
   end
 
 end
