@@ -4,10 +4,10 @@ class PasswordsController < ApplicationController
 	end
 
 	def create
-
+		
 	end
 
 	def index
-	  @password = Password.new 
+	  @password = Password.new
   end
 end

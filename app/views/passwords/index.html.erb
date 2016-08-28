@@ -31,24 +31,24 @@
       <!-- Description -->
       <label class="control-label"  for="description">Descrição da senha</label>
       <div class="controls">
-        <%= f.text_field :description, required:"required", placeholder:"", class:"input-xlarge" %>
-        <p class="help-block">Digite a descrição da senha <small> * Obrigatório </small> </p>
+        <%= f.text_field :description, required:"required", placeholder:"", class:"col-sm-4" %></br></br>
+        <p class="help-block">Digite a descrição da senha <small> * Obrigatório </small> </p></br>
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label"  for="url">URL da senha</label>
       <div class="controls">
-        <%= f.text_field :url, placeholder:"", class:"input-xlarge" %>
-        <p class="help-block">Digite a URL do site ou deixe em branco</p>
+        <%= f.text_field :url, placeholder:"", type:"url" , class:"col-sm-12" %></br></br>
+        <p class="help-block">Digite a URL do site ou deixe em branco</p></br>
       </div>
     </div>
 
     <div class="control-group">
       <label class="control-label" for="user">Usuário</label>
       <div class="controls">
-        <%= f.text_field :user, placeholder:"", class:"input-xlarge" %>
-        <p class="help-block">Digite o usuário </p>
+        <%= f.text_field :user, placeholder:"", class:"col-sm-4" %></br></br>
+        <p class="help-block">Digite o usuário </p></br>
       </div>
     </div>
 
@@ -56,8 +56,8 @@
       <!-- Password-->
       <label class="control-label" for="password">Senha</label>
       <div class="controls">
-        <%= f.text_field :password, type:"password", required:"required", placeholder:"", class:"input-xlarge" %>
-        <p class="help-block">Digite a senha <small> * Obrigatório </small></p>
+        <%= f.text_field :password, type:"password", required:"required", placeholder:"", class:"col-sm-4" %></br></br>
+        <p class="help-block">Digite a senha <small> * Obrigatório </small></p></br>
       </div>
     </div>
 
@@ -65,9 +65,9 @@
       <!-- Password -->
       <label class="control-label"  for="password_confirm">Confirme a senha</label>
       <div class="controls">
-        <input type="password" id="password_confirm" required="required" name="password_confirm" placeholder="" class="input-xlarge">
-        <p class="help-block">Por favor, confirme a senha <small> * Obrigatório </small> </p>
-      </div>
+        <input type="password" id="password_confirm" required="required" name="password_confirm" placeholder="" class="col-sm-4">
+  </br></br>      <p class="help-block">Por favor, confirme a senha <small> * Obrigatório </small> </p>
+</div>
     </div>
 
 
